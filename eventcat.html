@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+   <script src="fav.js" defer></script>
+   <link rel="stylesheet" type="text/css" href="fav.css">
+</head>
+
+<style>
+
+
+.dark-background {
+   background-color: #0b0b0b;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+
+
+.bulb-image {
+   width: 150px;
+}
+
+
+.cat-image {
+   width: 300px;
+}
+
+
+.switch-board {
+   width: 294px;
+   height: 139px;
+   background-color: #7b8794;
+   border-radius: 12px;
+   padding-top: 32px;
+   padding-bottom: 32px;
+   padding-left: 16px;
+   padding-right: 16px;
+   margin: 16px;
+}
+
+
+.switch-status {
+   font-family: "Roboto";
+   font-weight: 500;
+   font-size: 24px;
+   color: #ffffff;
+   margin-bottom: 24px;
+}
+
+.on-switch {
+   font-family: "Roboto";
+   font-weight: bold;
+   font-size: 24px;
+   color: #ffffff;
+   border-radius: 8px;
+   width: 99px;
+   height: 44px;
+   margin-left: 16px;
+   background-color: #cbd2d9;
+}
+
+
+.off-switch {
+   font-family: "Roboto";
+   font-weight: bold;
+   font-size: 24px;
+   color: #ffffff;
+   border-radius: 8px;
+   width: 99px;
+   height: 44px;
+   background-color: #e12d39;
+}
+
+
+.cneter-content{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+
+}
+
+
+</style>
+<body>
+   <div class="dark-background text-center">
+       <div>
+           <img src="https://png.pngtree.com/png-vector/20191015/ourmid/pngtree-light-bulb-vector-glowing-bright-light-bulb-icon-fluorescent-invention-3d-png-image_1788706.jpg" class="bulb-image" id="bulbImage" />
+       </div>
+       <div>
+           <img src="https://images.pexels.com/photos/3974516/pexels-photo-3974516.jpeg?cs=srgb&dl=pexels-marek-kupiec-1696944-3974516.jpg&fm=jpg" class="cat-image" id="catImage" />
+       </div>
+       <div class="cneter-content pt-6">
+           <div class="switch-board">
+               <h1 class="switch-status" id="switchstatus">Switched On</h1>
+               <button class="off-switch" onclick="switchoff()" id="offswitch">OFF</button>
+               <button class="on-switch" onclick="switchon()" id="onswitch">ON</button>
+           </div>
+       </div>
+   </div>
+
+
+   <script>
+
+    function switchon(){
+        document.getElementById("onswitch")
+        catImage.src = "https://www.thesprucepets.com/thmb/dO4KOe9_4qokOgiObitGGMJQIec=/1999x0/filters:no_upscale():strip_icc()/twenty20_e47b3798-dd9b-40b1-91ef-1d820337966e-5aa3f798642dca00363b0df1.jpg";
+        bulbImage.src = "https://png.pngtree.com/png-vector/20191015/ourmid/pngtree-light-bulb-vector-glowing-bright-light-bulb-icon-fluorescent-invention-3d-png-image_1788706.jpg";
+
+    }
+
+    function switchoff(){
+        document.getElementById("offswitch")
+        catImage.src = "https://images.pexels.com/photos/3974516/pexels-photo-3974516.jpeg?cs=srgb&dl=pexels-marek-kupiec-1696944-3974516.jpg&fm=jpg";
+        bulbImage.src = "https://media.istockphoto.com/id/613875138/photo/retro-edison-light-bulb.jpg?s=612x612&w=is&k=20&c=XLg8HD-xj6M_hdMm4VNEoE0sclEsyU9HvFB7Vl1LFio=";
+
+    }
+   </script>
+</body>
+
+
+</html>
